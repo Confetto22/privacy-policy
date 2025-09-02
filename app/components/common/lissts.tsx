@@ -8,8 +8,13 @@ import {
 } from "lucide-react";
 
 export const DataCollection = () => {
-  const dataCollectionList = [{}];
-
+  const collectionList = [
+    "Create an account or profile",
+    "Enroll in courses or educational programs",
+    "Submit assignments or participate in discussions",
+    "Contact us for support or inquiries",
+    "Subscribe to our newsletters or updates",
+  ];
   return (
     <section id="data-collection" className="mb-12">
       <div className="flex items-center gap-3 mb-6">
@@ -21,11 +26,9 @@ export const DataCollection = () => {
           We collect information you provide directly to us, such as when you:
         </p>
         <ul className="pl-6 space-y-2 list-disc">
-          <li>Create an account or profile</li>
-          <li>Enroll in courses or educational programs</li>
-          <li>Submit assignments or participate in discussions</li>
-          <li>Contact us for support or inquiries</li>
-          <li>Subscribe to our newsletters or updates</li>
+          {collectionList.map((list) => (
+            <li key={list}>{list}</li>
+          ))}
         </ul>
         <p>
           The types of information we may collect include your name, email
@@ -38,6 +41,14 @@ export const DataCollection = () => {
 };
 
 export const UseData = () => {
+  const dataList = [
+    "Provide, maintain, and improve our educational services",
+    "Process enrollments and track course progress",
+    "Send you important updates about your courses and account",
+    "Respond to your comments, questions, and support requests",
+    "Analyze usage patterns to enhance user experience",
+    "Comply with legal obligations and protect our rights",
+  ];
   return (
     <section id="use-of-data" className="mb-12">
       <div className="flex items-center gap-3 mb-6">
@@ -47,12 +58,9 @@ export const UseData = () => {
       <div className="space-y-4 text-gray-700">
         <p>We use the information we collect to:</p>
         <ul className="pl-6 space-y-2 list-disc">
-          <li>Provide, maintain, and improve our educational services</li>
-          <li>Process enrollments and track course progress</li>
-          <li>Send you important updates about your courses and account</li>
-          <li>Respond to your comments, questions, and support requests</li>
-          <li>Analyze usage patterns to enhance user experience</li>
-          <li>Comply with legal obligations and protect our rights</li>
+          {dataList.map((list) => (
+            <li key={list}>{list}</li>
+          ))}
         </ul>
       </div>
     </section>
@@ -60,6 +68,24 @@ export const UseData = () => {
 };
 
 export const CookiesTracking = () => {
+  const cookiesList = [
+    {
+      title: "Essential Cookies: ",
+      text: "Required for basic platform functionality",
+    },
+    {
+      title: "Performance Cookies:: ",
+      text: "Help us understand how you use our platform",
+    },
+    {
+      title: "Preference  Cookies: ",
+      text: "Remember your settings and preferences",
+    },
+    {
+      title: "Marketing  Cookies: ",
+      text: "Used to deliver relevant educational content",
+    },
+  ];
   return (
     <section id="cookies" className="mb-12">
       <div className="flex items-center gap-3 mb-6">
@@ -74,22 +100,11 @@ export const CookiesTracking = () => {
         </p>
         <p>Types of cookies we use:</p>
         <ul className="pl-6 space-y-2 list-disc">
-          <li>
-            <strong>Essential Cookies:</strong> Required for basic platform
-            functionality
-          </li>
-          <li>
-            <strong>Performance Cookies:</strong> Help us understand how you use
-            our platform
-          </li>
-          <li>
-            <strong>Preference Cookies:</strong> Remember your settings and
-            preferences
-          </li>
-          <li>
-            <strong>Marketing Cookies:</strong> Used to deliver relevant
-            educational content
-          </li>
+          {cookiesList.map((list) => (
+            <li key={list.title}>
+              <strong>{list.title}</strong> {list.text}
+            </li>
+          ))}
         </ul>
       </div>
     </section>
@@ -97,6 +112,13 @@ export const CookiesTracking = () => {
 };
 
 export const ThirdParties = () => {
+  const thirdParties = [
+    "Analytics services to understand platform usage",
+    "Payment processors for course enrollments",
+    "Email services for communications",
+    "Cloud storage providers for content delivery",
+    "Video hosting platforms for educational content",
+  ];
   return (
     <section id="third-party" className="mb-12">
       <div className="flex items-center gap-3 mb-6">
@@ -111,11 +133,9 @@ export const ThirdParties = () => {
         </p>
         <p>Third-party services we use include:</p>
         <ul className="pl-6 space-y-2 list-disc">
-          <li>Analytics services to understand platform usage</li>
-          <li>Payment processors for course enrollments</li>
-          <li>Email services for communications</li>
-          <li>Cloud storage providers for content delivery</li>
-          <li>Video hosting platforms for educational content</li>
+          {thirdParties.map((list) => (
+            <li key={list}>{list}</li>
+          ))}
         </ul>
       </div>
     </section>
@@ -123,6 +143,32 @@ export const ThirdParties = () => {
 };
 
 export const Rights = () => {
+  const rights = [
+    {
+      title: "Access: ",
+      text: " Request a copy of the personal information we hold about you",
+    },
+    {
+      title: "Correction: ",
+      text: "Ask us to correct any inaccurate or incomplete information",
+    },
+    {
+      title: "Deletion: ",
+      text: "Request deletion of your personal information",
+    },
+    {
+      title: "Portability: ",
+      text: "Request a copy of your data in a structured format",
+    },
+    {
+      title: "Restriction: ",
+      text: "Ask us to limit how we use your information",
+    },
+    {
+      title: "Objection: ",
+      text: " Object to certain uses of your personal information",
+    },
+  ];
   return (
     <section id="your-rights" className="mb-12">
       <div className="flex items-center gap-3 mb-6">
@@ -132,30 +178,11 @@ export const Rights = () => {
       <div className="space-y-4 text-gray-700">
         <p>You have several rights regarding your personal information:</p>
         <ul className="pl-6 space-y-2 list-disc">
-          <li>
-            <strong>Access:</strong> Request a copy of the personal information
-            we hold about you
-          </li>
-          <li>
-            <strong>Correction:</strong> Ask us to correct any inaccurate or
-            incomplete information
-          </li>
-          <li>
-            <strong>Deletion:</strong> Request deletion of your personal
-            information
-          </li>
-          <li>
-            <strong>Portability:</strong> Request a copy of your data in a
-            structured format
-          </li>
-          <li>
-            <strong>Restriction:</strong> Ask us to limit how we use your
-            information
-          </li>
-          <li>
-            <strong>Objection:</strong> Object to certain uses of your personal
-            information
-          </li>
+          {rights.map((list) => (
+            <li key={list.title}>
+              <strong>{list.title}</strong> {list.text}
+            </li>
+          ))}
         </ul>
         <p>
           To exercise any of these rights, please contact us using the
@@ -167,6 +194,24 @@ export const Rights = () => {
 };
 
 export const Contacts = () => {
+  const contacts = [
+    {
+      title: "Email: ",
+      text: " privacy@eduplatform.com",
+    },
+    {
+      title: "Phone: ",
+      text: "+1 (555) 123-4567",
+    },
+    {
+      title: "Address: ",
+      text: "123 Education Street, Learning City, LC 12345",
+    },
+    {
+      title: "Business Hours: ",
+      text: " Monday - Friday, 9:00 AM - 6:00 PM EST",
+    },
+  ];
   return (
     <section id="contact" className="mb-12">
       <div className="flex items-center gap-3 mb-6">
@@ -179,20 +224,11 @@ export const Contacts = () => {
           practices, please contact us:
         </p>
         <div className="p-6 space-y-3 rounded-lg bg-gray-50">
-          <p>
-            <strong>Email:</strong> privacy@eduplatform.com
-          </p>
-          <p>
-            <strong>Phone:</strong> +1 (555) 123-4567
-          </p>
-          <p>
-            <strong>Address:</strong> 123 Education Street, Learning City, LC
-            12345
-          </p>
-          <p>
-            <strong>Business Hours:</strong> Monday - Friday, 9:00 AM - 6:00 PM
-            EST
-          </p>
+          {contacts.map((contact) => (
+            <p key={contact.title}>
+              <strong>{contact.title}</strong> {contact.text}
+            </p>
+          ))}
         </div>
         <p>
           We will respond to your inquiry within 30 days of receiving your
